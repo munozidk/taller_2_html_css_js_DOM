@@ -1,0 +1,148 @@
+/*Estilos generales*/
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color:  #0b0f15;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #6b6fea;
+    margin-bottom: 30px;
+}
+
+/*Cuadricula productos*/
+
+#catalogo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*tarjeta para cada producto*/
+
+.tarjeta{
+    background-color: #9ea7b4;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(66, 205, 251, 0.999) ;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/*imagen del producto*/
+
+.tarjeta img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/*nombre del producto*/
+
+.tarjeta h2 {
+    font-size: 16px;
+    margin: 0;
+    color: #222;
+}
+
+/*descripcion producto*/
+
+.tarjeta p.descripcion {
+    font-size: 13px;
+    color: #363636;
+    margin: 0;
+}
+
+/*precio producto*/
+
+.tarjeta p.precio{
+    font-size: 18px;
+    font-weight: bold;
+    color: #2a7ae2;
+    margin: 0;
+}
+
+/* Botón agregar al carrito */
+.btn-carrito {
+  background-color: #2a7ae2;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+ 
+.btn-carrito:hover:not(:disabled) {
+  background-color: #1a5cb8;
+}
+ 
+/* Botón deshabilitado (ya agregado) */
+.btn-carrito:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+ 
+/* Botón mostrar/ocultar reseñas */
+.btn-resenas {
+  background-color: #e8e8e8;
+  color: #333;
+  border: none;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+}
+ 
+.btn-resenas:hover {
+  background-color: #d0d0d0;
+}
+ 
+/* Contenedor de reseñas (oculto por defecto) */
+.lista-resenas {
+  display: none;
+  margin-top: 8px;
+}
+ 
+/* Cada reseña individual */
+.resena {
+  background-color: #93a1fe;
+  border-left: 3px solid #2a7ae2;
+  padding: 8px;
+  border-radius: 4px;
+  margin-bottom: 6px;
+  font-size: 12px;
+  color: #444;
+}
+ 
+.resena span.usuario {
+  font-weight: bold;
+  color: #222;
+}
+ 
+.resena span.fecha {
+  color: #323232;
+  float: right;
+}
+ 
+/* Mensaje cuando no hay reseñas */
+.sin-resenas {
+  font-size: 12px;
+  color: #242233;
+  font-style: italic;
+}
+
+/*hover tarjeta*/
+
+.tarjeta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgb(255, 255, 255);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
